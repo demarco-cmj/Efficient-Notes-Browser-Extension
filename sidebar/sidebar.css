@@ -1,0 +1,21 @@
+body {
+  background-color: #D8E2DC;
+}
+
+#content {
+  height: 90%;
+  margin: 1em 1em 0 1em;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  border: .4em solid #BBBBBB;
+  white-space: pre-wrap;
+  transition: border .2s ease-out;
+}
+
+#content[contenteditable=true] {
+  border: .4em solid #888888;
+  transition: border .2s ease-in;
+}
+
+[contenteditable]:focus {
+  outline: 0px solid transparent;
+}

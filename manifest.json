@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "Efficient Notes",
+  "description": "A web extension for taking and organizing notes for the content you read online.",
+  "version": "1.0",
+  "homepage_url": "https://github.com/Connor-DeMarco/Efficient-Notes",
+
+  "permissions": [
+    "storage", "tabs", "menus", "<all_urls>", "clipboardWrite"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "sidebar_action": {
+    "default_title": "Efficient Notes",
+    "default_panel": "sidebar/sidebar.html"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "efficient.notes@wwu.edu"
+    }
+  }
+}
